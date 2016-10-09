@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'distribution'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'com.github.scribejava:scribejava-core:3.0.0'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
+    compile 'joda-time:joda-time:2.9.4'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'commons-io:commons-io:2.4'
+}

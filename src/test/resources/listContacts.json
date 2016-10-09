@@ -1,0 +1,487 @@
+{
+  "leads": [
+    {
+      "color": "blue",
+      "createdBy": 333,
+      "createdByUser": "admin@server.com",
+      "dateAdded": "2016-05-24T19:23:25+00:00",
+      "dateIdentified": "2016-05-24T19:23:26+00:00",
+      "dateModified": "2016-05-24T19:23:33+00:00",
+      "fields": {
+        "all": {
+          "address1": null,
+          "address2": null,
+          "city": "Sao Paulo",
+          "company": null,
+          "country": "Brazil",
+          "email": "user123@example.com",
+          "facebook": null,
+          "fax": null,
+          "firstname": "Jorge",
+          "foursquare": null,
+          "googleplus": null,
+          "instagram": null,
+          "lastname": null,
+          "mobile": null,
+          "phone": "11987654321",
+          "position": null,
+          "skype": null,
+          "state": "Sao Paulo",
+          "title": null,
+          "twitter": null,
+          "website": null,
+          "zipcode": null
+        },
+        "core": {
+          "address1": {
+            "alias": "address1",
+            "group": "core",
+            "id": "10",
+            "label": "Address Line 1",
+            "type": "text",
+            "value": null
+          },
+          "address2": {
+            "alias": "address2",
+            "group": "core",
+            "id": "11",
+            "label": "Address Line 2",
+            "type": "text",
+            "value": null
+          },
+          "city": {
+            "alias": "city",
+            "group": "core",
+            "id": "12",
+            "label": "City",
+            "type": "lookup",
+            "value": "Sao Paulo"
+          },
+          "company": {
+            "alias": "company",
+            "group": "core",
+            "id": "4",
+            "label": "Company",
+            "type": "lookup",
+            "value": null
+          },
+          "country": {
+            "alias": "country",
+            "group": "core",
+            "id": "15",
+            "label": "Country",
+            "type": "country",
+            "value": "Brazil"
+          },
+          "email": {
+            "alias": "email",
+            "group": "core",
+            "id": "6",
+            "label": "Email",
+            "type": "email",
+            "value": "user123@example.com"
+          },
+          "fax": {
+            "alias": "fax",
+            "group": "core",
+            "id": "9",
+            "label": "Fax",
+            "type": "text",
+            "value": null
+          },
+          "firstname": {
+            "alias": "firstname",
+            "group": "core",
+            "id": "2",
+            "label": "First Name",
+            "type": "text",
+            "value": "Jorge"
+          },
+          "lastname": {
+            "alias": "lastname",
+            "group": "core",
+            "id": "3",
+            "label": "Last Name",
+            "type": "text",
+            "value": null
+          },
+          "mobile": {
+            "alias": "mobile",
+            "group": "core",
+            "id": "8",
+            "label": "Mobile",
+            "type": "tel",
+            "value": null
+          },
+          "phone": {
+            "alias": "phone",
+            "group": "core",
+            "id": "7",
+            "label": "Phone",
+            "type": "tel",
+            "value": "11987654321"
+          },
+          "position": {
+            "alias": "position",
+            "group": "core",
+            "id": "5",
+            "label": "Position",
+            "type": "text",
+            "value": null
+          },
+          "state": {
+            "alias": "state",
+            "group": "core",
+            "id": "13",
+            "label": "State",
+            "type": "region",
+            "value": "Sao Paulo"
+          },
+          "title": {
+            "alias": "title",
+            "group": "core",
+            "id": "1",
+            "label": "Title",
+            "type": "lookup",
+            "value": null
+          },
+          "website": {
+            "alias": "website",
+            "group": "core",
+            "id": "16",
+            "label": "Website",
+            "type": "text",
+            "value": null
+          },
+          "zipcode": {
+            "alias": "zipcode",
+            "group": "core",
+            "id": "14",
+            "label": "Zipcode",
+            "type": "lookup",
+            "value": null
+          }
+        },
+        "personal": [],
+        "professional": [],
+        "social": {
+          "facebook": {
+            "alias": "facebook",
+            "group": "social",
+            "id": "18",
+            "label": "Facebook",
+            "type": "text",
+            "value": null
+          },
+          "foursquare": {
+            "alias": "foursquare",
+            "group": "social",
+            "id": "22",
+            "label": "Foursquare",
+            "type": "text",
+            "value": null
+          },
+          "googleplus": {
+            "alias": "googleplus",
+            "group": "social",
+            "id": "19",
+            "label": "Google+",
+            "type": "text",
+            "value": null
+          },
+          "instagram": {
+            "alias": "instagram",
+            "group": "social",
+            "id": "21",
+            "label": "Instagram",
+            "type": "text",
+            "value": null
+          },
+          "skype": {
+            "alias": "skype",
+            "group": "social",
+            "id": "20",
+            "label": "Skype",
+            "type": "text",
+            "value": null
+          },
+          "twitter": {
+            "alias": "twitter",
+            "group": "social",
+            "id": "17",
+            "label": "Twitter",
+            "type": "text",
+            "value": null
+          }
+        }
+      },
+      "id": 449,
+      "ipAddresses": {
+        "192.168.1.198": {
+          "ipDetails": {
+            "city": "Sao Paulo",
+            "country": "Brazil",
+            "extra": "",
+            "isp": "",
+            "latitude": -30.0333,
+            "longitude": -51.2,
+            "organization": "",
+            "region": "Sao Paulo",
+            "timezone": "America/Sao_Paulo",
+            "zipcode": null
+          }
+        }
+      },
+      "isPublished": true,
+      "lastActive": "2016-05-31T18:37:36+00:00",
+      "modifiedBy": 334,
+      "modifiedByUser": "admin2@server.com",
+      "owner": null,
+      "points": 18,
+      "preferredProfileImage": "image.png",
+      "tags": []
+    },
+    {
+      "color": "",
+      "createdBy": 1,
+      "createdByUser": "",
+      "dateAdded": "2016-08-08T23:22:57+00:00",
+      "dateIdentified": null,
+      "dateModified": null,
+      "fields": {
+        "all": {
+          "address1": null,
+          "address2": null,
+          "city": null,
+          "company": null,
+          "country": "Brazil",
+          "email": null,
+          "facebook": null,
+          "fax": null,
+          "firstname": null,
+          "foursquare": null,
+          "googleplus": null,
+          "instagram": null,
+          "lastname": null,
+          "mobile": null,
+          "phone": null,
+          "position": null,
+          "skype": null,
+          "state": null,
+          "title": null,
+          "twitter": null,
+          "website": null,
+          "zipcode": null
+        },
+        "core": {
+          "address1": {
+            "alias": "address1",
+            "group": "core",
+            "id": "10",
+            "label": "Address Line 1",
+            "type": "text",
+            "value": null
+          },
+          "address2": {
+            "alias": "address2",
+            "group": "core",
+            "id": "11",
+            "label": "Address Line 2",
+            "type": "text",
+            "value": null
+          },
+          "city": {
+            "alias": "city",
+            "group": "core",
+            "id": "12",
+            "label": "City",
+            "type": "lookup",
+            "value": null
+          },
+          "company": {
+            "alias": "company",
+            "group": "core",
+            "id": "4",
+            "label": "Company",
+            "type": "lookup",
+            "value": null
+          },
+          "country": {
+            "alias": "country",
+            "group": "core",
+            "id": "15",
+            "label": "Country",
+            "type": "country",
+            "value": "Brazil"
+          },
+          "email": {
+            "alias": "email",
+            "group": "core",
+            "id": "6",
+            "label": "Email",
+            "type": "email",
+            "value": null
+          },
+          "fax": {
+            "alias": "fax",
+            "group": "core",
+            "id": "9",
+            "label": "Fax",
+            "type": "text",
+            "value": null
+          },
+          "firstname": {
+            "alias": "firstname",
+            "group": "core",
+            "id": "2",
+            "label": "First Name",
+            "type": "text",
+            "value": null
+          },
+          "lastname": {
+            "alias": "lastname",
+            "group": "core",
+            "id": "3",
+            "label": "Last Name",
+            "type": "text",
+            "value": null
+          },
+          "mobile": {
+            "alias": "mobile",
+            "group": "core",
+            "id": "8",
+            "label": "Mobile",
+            "type": "tel",
+            "value": null
+          },
+          "phone": {
+            "alias": "phone",
+            "group": "core",
+            "id": "7",
+            "label": "Phone",
+            "type": "tel",
+            "value": null
+          },
+          "position": {
+            "alias": "position",
+            "group": "core",
+            "id": "5",
+            "label": "Position",
+            "type": "text",
+            "value": null
+          },
+          "state": {
+            "alias": "state",
+            "group": "core",
+            "id": "13",
+            "label": "State",
+            "type": "region",
+            "value": null
+          },
+          "title": {
+            "alias": "title",
+            "group": "core",
+            "id": "1",
+            "label": "Title",
+            "type": "lookup",
+            "value": null
+          },
+          "website": {
+            "alias": "website",
+            "group": "core",
+            "id": "16",
+            "label": "Website",
+            "type": "text",
+            "value": null
+          },
+          "zipcode": {
+            "alias": "zipcode",
+            "group": "core",
+            "id": "14",
+            "label": "Zipcode",
+            "type": "lookup",
+            "value": null
+          }
+        },
+        "personal": [],
+        "professional": [],
+        "social": {
+          "facebook": {
+            "alias": "facebook",
+            "group": "social",
+            "id": "18",
+            "label": "Facebook",
+            "type": "text",
+            "value": null
+          },
+          "foursquare": {
+            "alias": "foursquare",
+            "group": "social",
+            "id": "22",
+            "label": "Foursquare",
+            "type": "text",
+            "value": null
+          },
+          "googleplus": {
+            "alias": "googleplus",
+            "group": "social",
+            "id": "19",
+            "label": "Google+",
+            "type": "text",
+            "value": null
+          },
+          "instagram": {
+            "alias": "instagram",
+            "group": "social",
+            "id": "21",
+            "label": "Instagram",
+            "type": "text",
+            "value": null
+          },
+          "skype": {
+            "alias": "skype",
+            "group": "social",
+            "id": "20",
+            "label": "Skype",
+            "type": "text",
+            "value": null
+          },
+          "twitter": {
+            "alias": "twitter",
+            "group": "social",
+            "id": "17",
+            "label": "Twitter",
+            "type": "text",
+            "value": null
+          }
+        }
+      },
+      "id": 5301,
+      "ipAddresses": {
+        "187.78.19.253": {
+          "ipDetails": {
+            "city": null,
+            "country": "Brazil",
+            "extra": "",
+            "isp": "",
+            "latitude": -23.5477,
+            "longitude": -46.6358,
+            "organization": "",
+            "region": "",
+            "timezone": null,
+            "zipcode": null
+          }
+        }
+      },
+      "isPublished": false,
+      "lastActive": "2016-08-09T00:26:49+00:00",
+      "modifiedBy": null,
+      "modifiedByUser": null,
+      "owner": null,
+      "points": 0,
+      "preferredProfileImage": null,
+      "tags": []
+    }
+  ],
+  "total": "5295"
+}
