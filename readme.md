@@ -1,7 +1,9 @@
 jMautic
 =======
 
-jMautic is a Java client for the [Mautic REST API](https://developer.mautic.org/#rest-api). With it, you can write Java code to interact with several Mautic APIs, such as reading your contacts programatically.
+jMautic is a Java client for the [Mautic REST API](https://developer.mautic.org/#rest-api). With it,
+you can write Java code to interact with several Mautic APIs, such as reading your contacts
+programatically.
 
 
 
@@ -85,6 +87,24 @@ In the future, it should support:
 How to Use
 ----------
 
+Create a instance of <code>OAuth2Service</code> (right now jMautic supports OAuth2, but in the
+future you may use other services here). Then configure the service with your Mautic instance access
+tokens.
+
+If its the first time connecting to the Mautic server, you need to authorize it. Use the
+<code>service.getAuthorizationUrl()</code> method to get a URL and send your user to that URL. The
+user will need to enter their credentials and confirm that your application is able to connect with
+his credentials. If the user confirms, Mautic will redirect the user to a <code>callbackUrl</code>,
+with a <code>code</code> parameter. You need to set this <code>code</code> in the
+<code>service.setAuthorizationCode(code)</code> method.
+
+If the authorization process completes successfully, you can use
+<code>service.getAccessToken()</code> and <code>service.getRefreshToken()</code> to reuse later when
+creating the <code>OAuth2Service</code>.
+
+Finally, call <code>service.build()</code> to get a <code>MauticApi</code> instance. This object
+has all the implemented methods from the Mautic API.
+
 
 
 Javadoc
@@ -106,9 +126,13 @@ The code should be built on the <code>build/libs/jMautic-[version].jar</code> fi
 
 ### How to Test
 
-Some jMautic tests need to connect to a real Mautic API to pass. You will need to configure the Mautic instance (as well as the API key and secret).
+Some jMautic tests need to connect to a real Mautic API to pass. You will need to configure the
+Mautic instance (as well as the API key and secret).
 
-First, open <code>jMauticTest.properties</code> and add valid configurations for <code>instanceUrl</code>, <code>callbackUrl</code>, <code>apiKey</code> and <code>apiSecret</code>. Some of the tests try to connect to a real Mautic Rest API, and will use the one on available on these options.
+First, open <code>jMauticTest.properties</code> and add valid configurations for
+<code>instanceUrl</code>, <code>callbackUrl</code>, <code>apiKey</code> and <code>apiSecret</code>.
+Some of the tests try to connect to a real Mautic Rest API, and will use the one on available on
+these options.
 
 Then, run
 
@@ -124,6 +148,8 @@ Finally, run
 
 Contributing
 ------------
+
+Please do your Pull Requests. Just make sure to include tests and use spaces for indentation :)
 
 
 
