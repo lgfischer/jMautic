@@ -22,15 +22,17 @@ public abstract class MauticOauth2Configuration {
     private static String API_KEY;
     private static String API_SECRET;
 
+    private static final String JMAUTIC_TEST_PROPERTIES = "jMauticTest.properties";
+
     public static void main(String... args) throws IOException {
         com.leonardofischer.letsencrypt.CertificateImporter.initialize();
-        loadConfiguration()
+        loadConfiguration();
         connectOauth2FirstTime();
         connectOauth2AfterRefreshToken();
     }
 
     private static void loadConfiguration() {
-        Properties prop = PropertiesHelper.getFromFile("jMauticTest.properties");
+        Properties prop = PropertiesHelper.getFromFile(JMAUTIC_TEST_PROPERTIES);
         MAUTIC_ENDPOINT = (String)prop.get("instanceUrl");
         CALLBACK = (String)prop.get("callbackUrl");
         API_KEY = (String)prop.get("apiKey");
@@ -96,7 +98,7 @@ public abstract class MauticOauth2Configuration {
     }
 
     private static void connectOauth2AfterRefreshToken() throws IOException {
-        Properties prop = PropertiesHelper.getFromFile("token.properties");
+        Properties prop = PropertiesHelper.getFromFile(JMAUTIC_TEST_PROPERTIES);
 
         final OAuth20Service service = new ServiceBuilder()
                 .apiKey(API_KEY)
@@ -152,6 +154,6 @@ public abstract class MauticOauth2Configuration {
         prop.setProperty("callbackUrl", CALLBACK);
         prop.setProperty("accessToken", token.getAccessToken());
         prop.setProperty("refreshToken", token.getRefreshToken());
-        PropertiesHelper.saveToFile(prop, "token.properties");
+        PropertiesHelper.saveToFile(prop, JMAUTIC_TEST_PROPERTIES);
     }
 }
