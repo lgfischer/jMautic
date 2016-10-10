@@ -126,3 +126,8 @@ Contributing
 ------------
 
 
+
+Licence
+-------
+
+Code is under the [MIT Licence](https://opensource.org/licenses/MIT).
