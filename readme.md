@@ -1,9 +1,12 @@
-# jMautic
+jMautic
+=======
 
 jMautic is a Java client for the [Mautic REST API](https://developer.mautic.org/#rest-api). With it, you can write Java code to interact with several Mautic APIs, such as reading your contacts programatically.
 
 
-## Example
+
+Example
+-------
 
     package com.leonardofischer.jmautic.examples;
 
@@ -62,7 +65,9 @@ jMautic is a Java client for the [Mautic REST API](https://developer.mautic.org/
     }
 
 
-# Features
+
+Features
+--------
 
 Right now, jMautic is able to:
 
@@ -75,9 +80,49 @@ In the future, it should support:
 - Updating contacts;
 - Accessing other endpoints (such as Assets, Campaigns, Forms, Segments, Pages, etc).
 
-# How to Use
 
-# Javadoc
 
-# How to Build
+How to Use
+----------
+
+
+
+Javadoc
+-------
+
+Not ready yet ;)
+
+
+
+How to Build
+------------
+
+Just run
+
+    ./gradlew jar
+
+The code should be built on the <code>build/libs/jMautic-[version].jar</code> file.
+
+
+### How to Test
+
+Some jMautic tests need to connect to a real Mautic API to pass. You will need to configure the Mautic instance (as well as the API key and secret).
+
+First, open <code>jMauticTest.properties</code> and add valid configurations for <code>instanceUrl</code>, <code>callbackUrl</code>, <code>apiKey</code> and <code>apiSecret</code>. Some of the tests try to connect to a real Mautic Rest API, and will use the one on available on these options.
+
+Then, run
+
+    ./gradlew configure
+    
+and follow the instructions on the output. This need to be done only once after you checkout the code.
+
+Finally, run
+
+    ./gradlew test
+
+
+
+Contributing
+------------
+
 

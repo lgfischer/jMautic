@@ -19,3 +19,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'commons-io:commons-io:2.4'
 }
+
+task('configure', type: JavaExec) {
+	main = "com.leonardofischer.jmautic.configuration.MauticOauth2Configuration"
+    classpath += sourceSets.test.runtimeClasspath
+    standardInput = System.in
+}
+
+jar.version = '0.0.1'
+
