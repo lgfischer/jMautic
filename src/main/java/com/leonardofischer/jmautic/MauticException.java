@@ -1,10 +1,13 @@
 package com.leonardofischer.jmautic;
 
+/**
+ * Encapsulate checked Exceptions for any of the jMautic API methods.
+ */
 public class MauticException extends Exception {
 
-	private static final long serialVersionUID = 1829943217171824306L;
+    private static final long serialVersionUID = 1829943217171824306L;
 
-	public MauticException() {
+    public MauticException() {
         super();
     }
 

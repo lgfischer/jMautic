@@ -11,6 +11,13 @@ import com.leonardofischer.jmautic.parser.Parser;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Implements the <a href="https://developer.mautic.org/#rest-api" target="_top">Mautic REST API</a>
+ * endpoints as simple Java methods.
+ *
+ * Require an {@link com.leonardofischer.jmautic.oauth.OAuthService} instance, that will implement the 
+ * authentication protocol used to connect to the Mautic endpoints.
+ */
 public class MauticApi {
 
     OAuthService oauthService;
