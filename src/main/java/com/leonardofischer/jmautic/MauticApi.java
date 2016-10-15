@@ -15,7 +15,7 @@ import java.io.InputStream;
  * Implements the <a href="https://developer.mautic.org/#rest-api" target="_top">Mautic REST API</a>
  * endpoints as simple Java methods.
  *
- * Require an {@link com.leonardofischer.jmautic.oauth.OAuthService} instance, that will implement the 
+ * Require an {@link com.leonardofischer.jmautic.oauth.OAuthService} instance, that will implement the
  * authentication protocol used to connect to the Mautic endpoints.
  */
 public class MauticApi {
@@ -24,6 +24,13 @@ public class MauticApi {
     ObjectMapper mapper;
     Parser parser;
 
+    /**
+     * Creates a new MauticApi object. Require an implementation of the
+     * {@link com.leonardofischer.jmautic.oauth.OAuthService} interface to authenticate in the
+     * Mautic instance and make requests.
+     *
+     * @param  oauthService an instance of an {@link com.leonardofischer.jmautic.oauth.OAuthService}
+     */
     public MauticApi(OAuthService oauthService) {
         this.oauthService = oauthService;
         this.mapper = new ObjectMapper();

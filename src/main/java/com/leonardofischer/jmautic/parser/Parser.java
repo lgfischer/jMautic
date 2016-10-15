@@ -16,6 +16,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
+/**
+ * Parses the Mautic REST API responses and constructs jMautic model objects from it.
+ */
 public class Parser {
 
     ObjectMapper mapper = new ObjectMapper();

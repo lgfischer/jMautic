@@ -3,6 +3,9 @@ package com.leonardofischer.jmautic.scribejava;
 import com.github.scribejava.core.builder.api.DefaultApi20;
 import com.github.scribejava.core.model.Verb;
 
+/**
+ * Extends ScribeJava to support Mautic endpoints using OAuth2.
+ */
 public class MauticOauth2Api extends DefaultApi20 {
     private String apiEndpoint;
 
