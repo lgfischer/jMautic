@@ -28,12 +28,12 @@ public class ParserTests {
             assertNotNull(listContactsResult);
 
             // checking ListContactsResult
-            assertEquals( 5295, listContactsResult.getTotal() );
-            assertNotNull( listContactsResult.getContacts() );
-            assertEquals( 2, listContactsResult.getContacts().size() );
+            assertEquals( 5295, listContactsResult.total );
+            assertNotNull( listContactsResult.contacts );
+            assertEquals( 2, listContactsResult.contacts.size() );
 
             // checking 1st contact
-            Contact contact = listContactsResult.getContacts().get(0);
+            Contact contact = listContactsResult.contacts.get(0);
             assertNotNull( contact );
             assertEquals(449, contact.id);
             assertEquals(new Date(1464117805000L/* 2016-05-24T19:23:25+00:00 */), contact.dateAdded);
@@ -90,7 +90,7 @@ public class ParserTests {
             //Object tags;
 
             // checking 2nd contact
-            contact = listContactsResult.getContacts().get(1);
+            contact = listContactsResult.contacts.get(1);
             assertNotNull( contact );
             assertEquals(5301, contact.id);
             assertEquals(new Date(1470698577000L/* 2016-08-08T23:22:57+00:00 */), contact.dateAdded);

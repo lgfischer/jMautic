@@ -31,9 +31,9 @@ public class OAuth2Example {
 
             // Execute API calls
             ListContactsResult result = mauticApi.listContacts();
-            System.out.println("There are "+result.getTotal()+" contacts. These are "
-                +result.getContacts().size()+" of them:");
-            Iterator<Contact> contactsIterator = result.getContacts().iterator();
+            System.out.println("There are "+result.total+" contacts. These are "
+                +result.contacts.size()+" of them:");
+            Iterator<Contact> contactsIterator = result.contacts.iterator();
             while( contactsIterator.hasNext() ) {
                 Contact contact = contactsIterator.next();
                 printContact(contact);
