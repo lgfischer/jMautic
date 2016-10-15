@@ -110,7 +110,7 @@ has all the implemented methods from the Mautic API.
 Javadoc
 -------
 
-Not ready yet ;)
+Latest Javadoc is available on [GitHub Pages](http://lgfischer.github.io/jMautic/latest/javadoc/).
 
 
 
