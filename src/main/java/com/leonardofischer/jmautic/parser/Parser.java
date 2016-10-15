@@ -55,13 +55,13 @@ public class Parser {
     }
 
     private void renameContactsToLeads(ObjectNode jsonTree) {
-        jsonTree.put( "contacts", jsonTree.get("leads") );
+        jsonTree.set( "contacts", jsonTree.get("leads") );
         jsonTree.remove("leads");
     }
 
     private void moveFieldsDotAllToAllFields(ObjectNode contact) {
         ObjectNode contactFields = (ObjectNode)contact.get("fields");
-        contact.put( "allFields", contactFields.get("all") );
+        contact.set( "allFields", contactFields.get("all") );
         contactFields.remove("all");
     }
 
@@ -90,7 +90,7 @@ public class Parser {
             }
         }
 
-        contact.put("fields", fields);
+        contact.set("fields", fields);
     }
 
     private void simplifyIpAddresses(ObjectNode contact) {
@@ -107,7 +107,7 @@ public class Parser {
             ipAddresses.add( ipAddressDetails );
         }
 
-        contact.put("ipAddresses", ipAddresses);
+        contact.set("ipAddresses", ipAddresses);
     }
 
 }

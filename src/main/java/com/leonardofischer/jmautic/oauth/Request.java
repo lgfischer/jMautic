@@ -13,7 +13,7 @@ public class Request {
 
     private String endpoint;
 
-    private Map parameters = new HashMap();
+    private Map<String,String> parameters = new HashMap<String,String>();
 
     public Request() {
         setMethod(Method.GET);

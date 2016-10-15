@@ -26,5 +26,10 @@ task('configure', type: JavaExec) {
     standardInput = System.in
 }
 
+tasks.withType(JavaCompile){
+    options.compilerArgs += '-Xlint:deprecation'
+    options.compilerArgs += '-Xlint:unchecked'
+}
+
 jar.version = '0.0.1'
 
