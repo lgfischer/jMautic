@@ -106,14 +106,14 @@ creating the <code>OAuth2Service</code>.
 Finally, call <code>service.build()</code> to get a <code>MauticApi</code> instance. This object
 has all the implemented methods from the Mautic API.
 
-More about the authentication in the [OAuth2Service class](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/OAuth2Service.html).
+Read more about the authentication process in the [OAuth2Service class Javadoc](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/OAuth2Service.html).
 
 
 
 Javadoc
 -------
 
-Latest Javadoc is available on [GitHub Pages](http://lgfischer.github.io/jMautic/latest/javadoc/).
+Here is the [latest jMautic Javadoc](http://lgfischer.github.io/jMautic/latest/javadoc/).
 
 
 
@@ -152,11 +152,16 @@ Finally, run
 Contributing
 ------------
 
-Please do your Pull Requests. Just make sure to include tests and use spaces for indentation :)
+Please do your Pull Requests. Any help is welcome :)
 
 
 
 Licence
 -------
 
-Code is under the [MIT Licence](https://opensource.org/licenses/MIT).
+jMautic is available under the [MIT Licence](https://opensource.org/licenses/MIT).
+
+Basically, you can use jMautic as you wish (you can use in commercial software too). Just point to
+[https://github.com/lgfischer/jMautic](https://github.com/lgfischer/jMautic) when referring to
+jMautic. And jMautic has no guarantee, and its authors are not responsible for any consequences
+of using it.
