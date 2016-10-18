@@ -76,12 +76,13 @@ Right now, jMautic is able to:
 - Access the Mautic REST API using OAuth2;
 - Read contacts;
 
+The implemented Mautic endpoints are accessible through the [MauticApi class](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/MauticApi.html).
+
 In the future, it should support:
 
 - Access the Mautic REST API using OAuth1a;
 - Updating contacts;
 - Accessing other endpoints (such as Assets, Campaigns, Forms, Segments, Pages, etc).
-
 
 
 How to Use
@@ -104,6 +105,8 @@ creating the <code>OAuth2Service</code>.
 
 Finally, call <code>service.build()</code> to get a <code>MauticApi</code> instance. This object
 has all the implemented methods from the Mautic API.
+
+More about the authentication in the [Javadoc](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/OAuth2Service.html).
 
 
 
