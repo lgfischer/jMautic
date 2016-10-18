@@ -72,7 +72,7 @@ public class ParserTests {
 
             assertNotNull(contact.ipAddresses);
             assertEquals(1, contact.ipAddresses.size());
-            IpAddress ipAddress = contact.ipAddresses.get(0);
+            IPAddress ipAddress = contact.ipAddresses.get(0);
             assertEquals("192.168.1.198", ipAddress.ipAddress);
             assertEquals("Sao Paulo", ipAddress.city);
             assertEquals("Brazil", ipAddress.country);

@@ -20,7 +20,7 @@ public class Contact {
     public List<ContactField> fields;
     public boolean isPublished;
     public String preferredProfileImage;
-    public List<IpAddress> ipAddresses;
+    public List<IPAddress> ipAddresses;
 
     // remaining fields to map correctly
     public Object owner;

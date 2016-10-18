@@ -1,6 +1,6 @@
 package com.leonardofischer.jmautic.model;
 
-public class IpAddress {
+public class IPAddress {
     public String ipAddress;
     public String city;
     public String country;
