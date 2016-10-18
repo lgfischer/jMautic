@@ -106,7 +106,7 @@ creating the <code>OAuth2Service</code>.
 Finally, call <code>service.build()</code> to get a <code>MauticApi</code> instance. This object
 has all the implemented methods from the Mautic API.
 
-More about the authentication in the [Javadoc](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/OAuth2Service.html).
+More about the authentication in the [OAuth2Service class](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/OAuth2Service.html).
 
 
 
