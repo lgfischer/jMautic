@@ -3,6 +3,11 @@ package com.leonardofischer.jmautic.oauth;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * Simple abstraction for HTTP requests. You can set a method, endpoint and request parameters.
+ * Future versions of jMautic may handle other parts of HTTP requests (such as headers, body,
+ * file uploads, etc).
+ */
 public class Request {
 
     public enum Method {

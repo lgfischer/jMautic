@@ -12,7 +12,9 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.ISODateTimeFormat;
 
-
+/**
+ * Adapter that is able to integrate ISO8601 dates into Jackson library.
+ */
 public class DateDeserializer extends StdDeserializer<Date> {
 
     public DateDeserializer() {
