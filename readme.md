@@ -110,8 +110,8 @@ Read more about the authentication process in the [OAuth2Service class Javadoc](
 
 
 
-Javadoc
--------
+Documentation
+-------------
 
 Here is the [latest jMautic Javadoc](http://lgfischer.github.io/jMautic/latest/javadoc/).
 
