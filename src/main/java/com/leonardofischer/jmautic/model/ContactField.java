@@ -7,4 +7,5 @@ public class ContactField {
     public String label;
     public String type;
     public String value;
+    public String fieldOrder;
 }
