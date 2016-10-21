@@ -33,3 +33,8 @@ tasks.withType(JavaCompile){
 
 jar.version = '0.0.1'
 
+task('styleJavadoc', type:Copy) {
+    from 'src/docs'
+    into 'build/docs/javadoc'
+}
+javadoc.finalizedBy styleJavadoc
