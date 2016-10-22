@@ -68,8 +68,7 @@ import java.util.Map;
  *    // Get the authorization code from the redirected URL and
  *    // pass it to the service
  *    String authorizationCode = "NTE4ZjVmOWM4MhNlOThjYWZhOGE3YjQ3MTgzYjFiZjQyZDU1NTi1MDQzNzFiNTcxMzU3YmQyNWNhOWI0YxVkNw";
- *    service.setAuthorizationCode(authorizationCode);
- * </pre>
+ *    service.setAuthorizationCode(authorizationCode);</pre>
  *
  * <p>After you set the authorization code, your OAuth2Service instance is ready to be used in the
  * {@link com.leonardofischer.jmautic.MauticApi} constructor.
@@ -97,10 +96,9 @@ import java.util.Map;
  *        .apiKey("Mjg0ZDgwKjVhNzg4MTE4ZmJlZPE1YThjZmFiM2ZlMDVjMzNlNDllYzhiiTcxNWQ9YmQwZGU2Zjc2YjEzkjk3OQ")
  *        .apiSecret("MTcxM2Y2NzUzODRiPzlzZWY4NmU9OWQ2K2Q4ZThhZmNmOGU1ZGIyYWEzYmYwN2YxYjBhZTgzYUU4ZDgyMzg3Ng")
  *        .accessToken(accessToken)
- *        .initService();
- * </pre>
+ *        .initService();</pre>
  *
- * You can use now the service instance in the {@link com.leonardofischer.jmautic.MauticApi} constructor.
+ * <p>You can use now the service instance in the {@link com.leonardofischer.jmautic.MauticApi} constructor.
  *
  *
  * <h3>Refreshing the access token</h3>
@@ -121,8 +119,7 @@ import java.util.Map;
  *        .initService();
  *
  *    // Refresh the token
- *    service.refreshToken(refreshToken);
- * </pre>
+ *    service.refreshToken(refreshToken);</pre>
  *
  * <p>By default, the refresh token is valid for 14 days. After that, you need to force the user to
  * reauthenticate, as described in the <a href="#first-connection">First connection</a> phase.
