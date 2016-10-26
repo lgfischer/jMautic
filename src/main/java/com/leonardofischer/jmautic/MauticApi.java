@@ -2,8 +2,7 @@ package com.leonardofischer.jmautic;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.leonardofischer.jmautic.model.ListContactsResult;
-import com.leonardofischer.jmautic.model.Search;
+import com.leonardofischer.jmautic.model.*;
 import com.leonardofischer.jmautic.oauth.OAuthService;
 import com.leonardofischer.jmautic.oauth.Request;
 import com.leonardofischer.jmautic.parser.Parser;
@@ -66,5 +65,12 @@ public class MauticApi {
         }
         InputStream result = oauthService.executeRequest(request);
         return parser.parseListContacts( result );
+    }
+
+    public GetContactResult getContact(int contactId) throws MauticException {
+        Request request = new Request();
+        request.setEndpoint("/api/contacts/"+contactId);
+        InputStream result = oauthService.executeRequest(request);
+        return parser.parseGetContact( result );
     }
 }
