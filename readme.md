@@ -92,7 +92,7 @@ How to Use
 
 ### Dependencies
 
-Right now, you need to [download](https://github.com/lgfischer/jMautic/archive/master.zip) or clone jMautic locally to [build it](#user-content-how-to-build). Then you need to include the build/libs/jMautic-0.0.1.jar file into your project. You also need to include in your project:
+Right now, you need to [download](https://github.com/lgfischer/jMautic/archive/master.zip) or clone jMautic locally to [build it](#user-content-how-to-build). Then you need to include the build/libs/jMautic-0.0.1.jar file into your project. You also need to include the following .jars in your project:
 
 - [SLF4J API Module - 1.7.21](https://mvnrepository.com/artifact/org.slf4j/slf4j-api/1.7.21)
 - [ScribeJava Core - 3.0.0](https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/3.0.0)
