@@ -7,23 +7,13 @@ repositories {
     jcenter()
 }
 
-// In this section you declare the dependencies for your production and test code
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     compile 'com.github.scribejava:scribejava-core:3.0.0'
-    compile 'commons-codec:commons-codec:1.10'
-    compile 'org.apache.httpcomponents:httpclient:4.5.2'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
     compile 'joda-time:joda-time:2.9.4'
-
     testCompile 'junit:junit:4.12'
     testCompile 'commons-io:commons-io:2.4'
-}
-
-task('configure', type: JavaExec) {
-	main = "com.leonardofischer.jmautic.configuration.MauticOauth2Configuration"
-    classpath += sourceSets.test.runtimeClasspath
-    standardInput = System.in
 }
 
 tasks.withType(JavaCompile){
@@ -31,10 +21,22 @@ tasks.withType(JavaCompile){
     options.compilerArgs += '-Xlint:unchecked'
 }
 
-jar.version = '0.0.1'
+task('configure', type: JavaExec) {
+    main = "com.leonardofischer.jmautic.configuration.MauticOauth2Configuration"
+    classpath += sourceSets.test.runtimeClasspath
+    standardInput = System.in
+}
+
+run {
+    main = 'com.leonardofischer.jmautic.examples.OAuth2Example'
+    classpath += sourceSets.test.runtimeClasspath
+    standardInput = System.in
+}
 
 task('styleJavadoc', type:Copy) {
     from 'src/docs'
     into 'build/docs/javadoc'
 }
 javadoc.finalizedBy styleJavadoc
+
+jar.version = '0.0.1'
