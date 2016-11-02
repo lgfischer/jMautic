@@ -119,7 +119,7 @@ public abstract class MauticOauth2Configuration {
         }
         System.out.println( "Got response code " + refreshTokenResponse.getCode() );
         final OAuth2AccessToken accessToken = service.getApi().getAccessTokenExtractor()
-            .extract(refreshTokenResponse.getBody());
+            .extract(refreshTokenResponse);
 
         saveToken(accessToken);
 

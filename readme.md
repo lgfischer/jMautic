@@ -95,8 +95,8 @@ How to Use
 Right now, you need to [download](https://github.com/lgfischer/jMautic/archive/master.zip) or clone jMautic locally to [build it](#user-content-how-to-build). Then you need to include the build/libs/jMautic-0.0.1.jar file into your project. You also need to include the following .jars in your project:
 
 - [SLF4J API Module - 1.7.21](https://mvnrepository.com/artifact/org.slf4j/slf4j-api/1.7.21)
-- [ScribeJava Core - 3.0.0](https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/3.0.0)
-- [Jackson Databind - 2.8.1](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.8.1)
+- [ScribeJava Core - 3.2.0](https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/3.2.0)
+- [Jackson Databind - 2.8.4](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.8.4)
 - [Joda Time - 2.9.4](https://mvnrepository.com/artifact/joda-time/joda-time/2.9.4)
 
 If this project gets traction, I'll work on an easier way to integrate jMautic into your projects.

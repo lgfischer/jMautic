@@ -4,13 +4,14 @@ apply plugin: 'distribution'
 apply plugin: 'eclipse'
 
 repositories {
+    mavenCentral()
     jcenter()
 }
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
-    compile 'com.github.scribejava:scribejava-core:3.0.0'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
+    compile 'com.github.scribejava:scribejava-core:3.2.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
     compile 'joda-time:joda-time:2.9.4'
     testCompile 'junit:junit:4.12'
     testCompile 'commons-io:commons-io:2.4'

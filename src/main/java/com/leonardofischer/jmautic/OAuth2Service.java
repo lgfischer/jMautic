@@ -286,8 +286,7 @@ public class OAuth2Service implements OAuthService {
 
             System.out.println( response.getCode() );
 
-            this.accessToken = service.getApi().getAccessTokenExtractor()
-                .extract(response.getBody());
+            this.accessToken = service.getApi().getAccessTokenExtractor().extract(response);
             return true;
         }
         catch(IOException e) {
