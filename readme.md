@@ -10,6 +10,8 @@ programatically.
 Example
 -------
 
+[src/test/java/com/leonardofischer/jmautic/examples/OAuth2Example.java](https://github.com/lgfischer/jMautic/blob/master/src/test/java/com/leonardofischer/jmautic/examples/OAuth2Example.java)
+
     package com.leonardofischer.jmautic.examples;
 
     import com.leonardofischer.jmautic.*;
@@ -73,7 +75,7 @@ Features
 
 Right now, jMautic is able to:
 
-- Access the Mautic REST API using OAuth2;
+- Access the Mautic REST API using Java (or any other JVM compatible language);
 - Read contacts;
 
 The implemented Mautic endpoints are accessible through the [MauticApi class](https://lgfischer.github.io/jMautic/latest/javadoc/com/leonardofischer/jmautic/MauticApi.html).
@@ -87,6 +89,19 @@ In the future, it should support:
 
 How to Use
 ----------
+
+### Dependencies
+
+Right now, you need to [download](https://github.com/lgfischer/jMautic/archive/master.zip) or clone jMautic locally to [build it](#user-content-how-to-build). Then you need to include the build/libs/jMautic-0.0.1.jar file into your project. You also need to include in your project:
+
+- [SLF4J API Module - 1.7.21](https://mvnrepository.com/artifact/org.slf4j/slf4j-api/1.7.21)
+- [ScribeJava Core - 3.0.0](https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/3.0.0)
+- [Jackson Databind - 2.8.1](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.8.1)
+- [Joda Time - 2.9.4](https://mvnrepository.com/artifact/joda-time/joda-time/2.9.4)
+
+If this project gets traction, I'll work on an easier way to integrate jMautic into your projects.
+
+### Writing Code
 
 Create a instance of <code>OAuth2Service</code> (right now jMautic supports OAuth2, but in the
 future you may use other services here). Then configure the service with your Mautic instance access
