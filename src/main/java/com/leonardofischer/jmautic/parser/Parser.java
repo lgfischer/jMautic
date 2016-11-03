@@ -177,16 +177,19 @@ public class Parser {
     private void simplifyIpAddresses(ObjectNode contact) {
         ArrayNode ipAddresses = contact.arrayNode(); //--> new ArrayNode();
 
-        ObjectNode ipAddressNames = (ObjectNode)contact.get("ipAddresses");
-        if( ipAddressNames!=null ) {
-            Iterator<String> ipAddressNamesIterator = ipAddressNames.fieldNames();
-            while( ipAddressNamesIterator.hasNext() ) {
-                String ipAddress = ipAddressNamesIterator.next();
-                ObjectNode ipAddressData = (ObjectNode)ipAddressNames.get(ipAddress);
+        JsonNode ipAddressNamesNode = contact.get("ipAddresses");
+        if( ipAddressNamesNode instanceof ObjectNode ) {
+            ObjectNode ipAddressNames = (ObjectNode)ipAddressNamesNode;
+            if( ipAddressNames!=null ) {
+                Iterator<String> ipAddressNamesIterator = ipAddressNames.fieldNames();
+                while( ipAddressNamesIterator.hasNext() ) {
+                    String ipAddress = ipAddressNamesIterator.next();
+                    ObjectNode ipAddressData = (ObjectNode)ipAddressNames.get(ipAddress);
 
-                ObjectNode ipAddressDetails = (ObjectNode)ipAddressData.get("ipDetails");
-                ipAddressDetails.put("ipAddress", ipAddress);
-                ipAddresses.add( ipAddressDetails );
+                    ObjectNode ipAddressDetails = (ObjectNode)ipAddressData.get("ipDetails");
+                    ipAddressDetails.put("ipAddress", ipAddress);
+                    ipAddresses.add( ipAddressDetails );
+                }
             }
         }
 

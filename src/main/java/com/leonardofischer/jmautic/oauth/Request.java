@@ -19,6 +19,7 @@ public class Request {
     private String endpoint;
 
     private Map<String,String> parameters = new HashMap<String,String>();
+    private Map<String,String> bodyParameters = new HashMap<String,String>();
 
     public Request() {
         setMethod(Method.GET);
@@ -44,7 +45,15 @@ public class Request {
         parameters.put(name, value);
     }
 
-    public Map getParameters() {
+    public Map<String,String> getParameters() {
         return parameters;
+    }
+
+    public void addBodyParameter(String name, String value) {
+        bodyParameters.put(name, value);
+    }
+
+    public Map<String,String> getBodyParameters() {
+        return bodyParameters;
     }
 }

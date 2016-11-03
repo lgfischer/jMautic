@@ -370,35 +370,59 @@ public class OAuth2Service implements OAuthService {
         try {
             String url = instanceUrl + request.getEndpoint() + "?access_token=" + accessToken.getAccessToken();
 
-            Map parameters = request.getParameters();
+            Map<String,String> parameters = request.getParameters();
             if( parameters!=null && !parameters.isEmpty() ) {
-                Iterator it = parameters.entrySet().iterator();
+                Iterator<Map.Entry<String,String>> it = parameters.entrySet().iterator();
                 while( it.hasNext() ) {
-                    Map.Entry parameter = (Map.Entry)it.next();
+                    Map.Entry<String,String> parameter = it.next();
                     url = url + '&' + parameter.getKey() + '=' + 
                         URLEncoder.encode((String)parameter.getValue(), "UTF-8");
                 }
             }
 
-            OAuthRequest oauthRequest = new OAuthRequest(Verb.GET, url, service);
+            OAuthRequest oauthRequest = new OAuthRequest(getVerb(request), url, service);
+
+            Map<String,String> bodyParameters = request.getBodyParameters();
+            if( bodyParameters!=null && !bodyParameters.isEmpty() ) {
+                Iterator<Map.Entry<String,String>> it = bodyParameters.entrySet().iterator();
+                while( it.hasNext() ) {
+                    Map.Entry<String,String> bodyParameter = it.next();
+                    oauthRequest.addBodyParameter(bodyParameter.getKey(), bodyParameter.getValue());
+                    System.out.println("bodyParameter: "+bodyParameter.getKey() +" -> "+bodyParameter.getValue());
+                }
+            }
+
             service.signRequest(accessToken, oauthRequest);
             Response response = oauthRequest.send();
 
             switch( response.getCode() ) {
                 case 200:
+                case 201:
                     return response.getStream();
 
                 case 404:
                     throw new MauticException("Invalid request GET " + request.getEndpoint());
 
                 default:
-                    throw new MauticException(response.getBody());
+                    throw new MauticException("Invalid status code " + response.getCode() +
+                        ". Body: " + response.getBody());
 
             }
         }
         catch(IOException e) {
             throw new MauticException(e.getMessage(), e);
         }
+    }
+
+    private Verb getVerb(Request request) {
+        Request.Method method = request.getMethod();
+        if( method==Request.Method.GET ) {
+            return Verb.GET;
+        }
+        if( method==Request.Method.POST ) {
+            return Verb.POST;
+        }
+        throw new UnsupportedOperationException("getVerb not implemented: "+method);
     }
 
     /**

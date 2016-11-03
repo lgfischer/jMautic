@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Date;
 
 public class Contact {
-    public long id;
+    public int id;
     public Date dateAdded;
-    public long createdBy;
+    public int createdBy;
     public String createdByUser;
     public Date dateModified;
     public int modifiedBy;

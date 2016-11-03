@@ -9,6 +9,11 @@ import com.leonardofischer.jmautic.parser.Parser;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Map;
+
+import org.joda.time.DateTime;
 
 /**
  * Implements the <a href="https://developer.mautic.org/#rest-api" target="_top">Mautic REST API</a>
@@ -70,6 +75,30 @@ public class MauticApi {
     public GetContactResult getContact(int contactId) throws MauticException {
         Request request = new Request();
         request.setEndpoint("/api/contacts/"+contactId);
+        InputStream result = oauthService.executeRequest(request);
+        return parser.parseGetContact( result );
+    }
+
+    public GetContactResult createContact(Map<String, String> contactFields, String ipAddress,
+            Date lastActive, int ownerId) throws MauticException {
+        Request request = new Request();
+        request.setMethod(Request.Method.POST);
+        request.setEndpoint("/api/contacts/new");
+        Iterator<Map.Entry<String,String>> it = contactFields.entrySet().iterator();
+        while( it.hasNext() ) {
+            Map.Entry<String,String> field = (Map.Entry<String,String>)it.next();
+            request.addBodyParameter(field.getKey(), field.getValue());
+        }
+        if( ipAddress!=null ) {
+            request.addBodyParameter("ipAddress", ipAddress);
+        }
+        if( lastActive!=null ) {
+            DateTime isoDateTime = new DateTime(lastActive);
+            request.addBodyParameter("lastActive", isoDateTime.toString());
+        }
+        if( ownerId>=0 ) {
+            request.addBodyParameter("owner", Integer.toString(ownerId));
+        }
         InputStream result = oauthService.executeRequest(request);
         return parser.parseGetContact( result );
     }
