@@ -68,6 +68,7 @@ Example
         }
     }
 
+There are other examples in the [com.leonardofischer.jmautic.examples package](https://github.com/lgfischer/jMautic/tree/master/src/test/java/com/leonardofischer/jmautic/examples).
 
 
 Features
